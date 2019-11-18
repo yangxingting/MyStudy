@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        /* 过渡: 
+        参数1: 属性  ， 参数2:持续时间  ， 参数3:动画效果  ，参数4: 开始时间 0s:立即开始
+        */
+        /* transition: width 0.5s ease 0s, height 0.3s ease 1s; */
+        /* transition: all 0.5s; */
+        transition: width 0.5s, height 1s;
+        ;
+    }
+    
+    div:hover {
+        width: 600px;
+        height: 600px;
+    }
+</style>
+
+
+<body>
+    <div></div>
+
+</body>
+
+</html>

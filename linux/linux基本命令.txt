@@ -1,0 +1,73 @@
+#单引号和双引号的区别
+echo "hello,world by $LOGNAME"  # 双引号内可以引用变量
+echo 'hello,world by $LOGNAME'  # 单引号不能引用变量，以纯文本输出
+
+#模糊查询
+ls *.txt
+ls tes?.txt
+ls [Tt]est[0-9]*
+
+#环境 变量
+env      #查看环境
+export   #出口变量
+
+#打开上一步变量存储
+cd -
+
+#linux 历史记录
+history         #查看历史操作记录
+!(步骤序列号)     #调用历史操作记录
+
+ehco  $HISTFILESIZE     # 总共可以保存多少条history
+
+#uname 操作
+uname    #查看系统名称
+uname  -a    #查看系统所有信息
+uname  -v    #查看系统版本号
+uname  -m    #查看系统硬件信息
+uname  -r -m -v  #组合查看
+
+#查看系统正在运行的程序
+top    #时时更新  q：退出
+
+
+#关机命令
+shutdown|halt| poweroff
+
+#用户切换
+su (username)
+
+#用户查看,查看当前用户
+whoami
+
+#显示环境变量路劲
+echo $PATH
+
+# 列表显示
+ls              #列表显示目录
+li-a(all)       #列表显示目录所有信息
+ls-l            #列表显示 详细
+ls-R            #目录层级列表显示
+ls-s            #排序显示list
+ls-t            #按照修改时间排序
+
+#删除httpd
+sudo yum aotoremove httpd
+
+#展开httpd安装信息
+yum list installed httpd
+
+#安装httpd
+sudo yum into httpd
+
+#查看httpd 信息
+yum info httpd
+
+# 查询httpd
+search httpd
+
+# 查找本机httpd 目录信息
+which httpd
+
+
+

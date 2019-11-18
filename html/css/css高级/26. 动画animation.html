@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        border-radius: 100%;
+        /* animation ： 动画名称，动画时间，运动曲线，何时开始，播放次数，是否反方向 */
+        /* infinite : 无限的 , alternate:循环  */
+        animation: atob 2s ease 0s infinite alternate;
+    }
+    /* 定义动画 */
+    
+    @keyframes atob {
+        from {
+            transform: translateX(0)
+        }
+        to {
+            transform: translateX(200px);
+        }
+    }
+</style>
+
+<body>
+    <div>
+
+    </div>
+
+</body>
+
+</html>

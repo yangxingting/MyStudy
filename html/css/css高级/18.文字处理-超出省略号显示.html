@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .my-textarea {
+        /* 禁止textarea拖动 */
+        resize: none;
+    }
+    
+    p.text1 {
+        /* 允许文字拆开显示 */
+        width: 100px;
+        height: 20px;
+        border: 1px solid #000;
+        word-break: keep-all;
+    }
+    
+    p.text2 {
+        /* 允许文字拆开显示 */
+        width: 100px;
+        height: 20px;
+        border: 1px solid #000;
+        /* 1、限制1行展示  2、超过部分隐藏  3、超出部分省略显示 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+        text-overflow: ellipsis;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <p class="text1">这里是p1encglishiss的文字，显示的文字是p1
+        </p>
+
+        <br>
+        <br>
+        <br>
+
+        <p class="text2">这里是text2的文字，显示的是text2</p>
+        <textarea class="my-textarea" name="" id="" cols="30" rows="10"></textarea>
+        <p class="text3">这里是text3的文字，显示的是text3</p>
+
+    </div>
+
+</body>
+
+</html>

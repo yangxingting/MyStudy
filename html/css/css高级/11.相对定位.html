@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    section {
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+    }
+    
+    div {
+        width: 100px;
+        height: 80px;
+        background-color: tomato;
+    }
+    
+    div:nth-child(3) {
+        /* 相对定位 原来的位置留着 */
+        background-color: yellow;
+        position: relative;
+        left: 50px;
+        top: 50px;
+    }
+</style>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div>相对定位</div>
+        <div></div>
+    </section>
+
+</body>
+
+</html>

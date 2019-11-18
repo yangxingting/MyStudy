@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <localStorage -- : 法存储的数据没有时间限制 -->
+    <div id="result1"></div>
+
+    <!-- sessionStorage : 当用户关闭浏览器窗口后，数据会被删除 -->
+    <div id="result2"></div>
+
+
+</body>
+
+<script>
+    if (typeof(Storage) !== "undefined") {
+        // 存储
+        localStorage.setItem("lastname", "林可萌");
+        document.getElementById("result1").innerHTML = localStorage.getItem("lastname")
+
+        // 取出
+
+    } else {
+        document.getElementById("result1").innerHTML = "您的浏览器不支持  Web Storage ...";
+    }
+
+    if (typeof(Storage) !== "undefined") {
+        // 如果sessionStorage 中存储的点击次数存在
+        if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+
+        } else {
+            sessionStorage.clickcount = 1;
+        }
+        document.getElementById("result1").innerHTML = "访问次数:" + sessionStorage.clickcount;
+
+    } else {
+        document.getElementById("result2").innerHTML = "抱歉！您的浏览器不支持 Web Storage ...";
+    }
+</script>
+
+</html>

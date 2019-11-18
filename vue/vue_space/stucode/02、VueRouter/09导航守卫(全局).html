@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@3.1.3/dist/vue-router.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/">首页</router-link>
+        <router-link to="/account">我的账户</router-link>
+        <router-link to="/order">我的订单</router-link>
+        <router-link to="/login">登录</router-link>
+
+        <!-- 路由出口 -->
+        <router-view></router-view>
+    </div>
+</body>
+
+<script>
+    // 登录状态
+    const isLogin = false
+
+    // 定义组件
+    let index = {
+        template: "<h1>首页</h1>"
+    }
+    let account = {
+        template: "<h1>我的账户</h1>"
+    }
+    let order = {
+        template: "<h1>我的订单</h1>"
+    }
+    let login = {
+        template: "<h1>登录</h1>"
+    }
+
+    // 定义路由
+    let router = new VueRouter({
+        routes: [{
+                path: "/",
+                component: index,
+                name: "index",
+
+            }, {
+                path: "/account",
+                component: account,
+                name: "account",
+
+            }, {
+                path: "/order",
+                component: order,
+                name: "order",
+
+            }, {
+                path: "/login",
+                component: login,
+                name: "login",
+
+            }
+
+
+        ]
+    })
+
+
+    // 路由守卫(路由跳转之前)
+    router.beforeEach(function(to, from, next) {
+            // next() 按照正常的流程走
+            // next("/"): 把之前的路由跳转断掉， 跳转到首页
+            // next(false):没有调用next  ，不会做任何跳转
+
+            // 定义需要授权的路由页面 装在数组中
+            const authRoutes = ['account', 'order']
+                // 判断 跳转的页面是不是在数组中
+            console.log(to.name)
+            if (authRoutes.indexOf(to.name) >= 0) {
+                // 判断是否登录
+                if (!isLogin) {
+                    next('/login')
+                } else {
+                    next()
+                }
+
+            } else if (to.name == 'login') {
+                // 判断跳转的不需要登录的路由页面是不是登录页面，并且判断有没有登录，登录了去首页
+                if (isLogin) {
+                    next('/')
+                } else {
+                    next()
+                }
+            } else {
+                next()
+            }
+
+        })
+        // 路由跳转之后
+    router.afterEach(function(to, from) {
+        console.log('to:', to);
+        console.log('from:', from);
+
+    })
+
+
+    new Vue({
+        el: "#app",
+        router: router
+
+    })
+</script>
+
+</html>

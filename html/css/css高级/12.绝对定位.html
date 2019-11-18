@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    section {
+        width: 500px;
+        height: 500px;
+        background-color: skyblue;
+        margin-left: 50px;
+        position: relative;
+    }
+    
+    div {
+        width: 100px;
+        height: 80px;
+        background-color: tomato;
+    }
+    
+    div:nth-child(3) {
+        background-color: yellow;
+        /* 绝对定位  父级有定位属性 相对于父级标签定位，否则，往上找 直到window*/
+        position: absolute;
+        left: 100px;
+        top: 0;
+    }
+</style>
+
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div>相对定位</div>
+        <div></div>
+    </section>
+
+</body>
+
+</html>

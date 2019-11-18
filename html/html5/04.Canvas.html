@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="300" height="200" style="border:1px solid red">
+            </canvas>
+
+</body>
+
+<script>
+    var myCanvas = document.getElementById("myCanvas");
+    var cxt = myCanvas.getContext("2d");
+    // 绘制直线
+    // cxt.moveTo(50, 50);
+    // cxt.lineTo(150, 50);
+    // cxt.lineTo(150, 180);
+    // cxt.stroke();
+    // cxt.stroke();
+
+    // 绘制圆
+    // cxt.fillStyle = "#FF0000";
+    // cxt.beginPath();
+    // cxt.arc(70, 70, 30, 0, Math.PI * 2, true);
+    // cxt.closePath();
+    // cxt.fill();
+
+    // 绘制图像
+    var img = new Image()
+    img.src = "https://www.ibabycenter.com/templets/aiding/images/logo-pc.png"
+    cxt.drawImage(img, 0, 0);
+</script>
+
+
+</html>

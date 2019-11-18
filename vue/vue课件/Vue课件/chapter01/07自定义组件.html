@@ -1,0 +1,726 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>第七节：自定义组件 | 知了课堂Vue框架课程大纲</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../chapter02/00.html" />
+    
+    
+    <link rel="prev" href="../chapter01/06表单输入绑定.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.7"
+        data-chapter-title="第七节：自定义组件"
+        data-filepath="chapter01/07自定义组件.md"
+        data-basepath=".."
+        data-revision="Thu Sep 12 2019 11:04:41 GMT+0800 (中国标准时间)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="chapter01/00.html">
+            
+                
+                    <a href="../chapter01/00.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        第一章：Vue
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="chapter01/01VSCode快捷键.html">
+            
+                
+                    <a href="../chapter01/01VSCode快捷键.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        第一节：VSCode快捷键
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="chapter01/02vue介绍.html">
+            
+                
+                    <a href="../chapter01/02vue介绍.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        第二节：vue介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chapter01/03模板语法（1）.html">
+            
+                
+                    <a href="../chapter01/03模板语法（1）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        第三节：模板语法（1）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="chapter01/04模板语法（2）.html">
+            
+                
+                    <a href="../chapter01/04模板语法（2）.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        第四节：模板语法（2）
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="chapter01/05计算属性和监听器.html">
+            
+                
+                    <a href="../chapter01/05计算属性和监听器.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        第五节：计算属性和监听器
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="chapter01/06表单输入绑定.html">
+            
+                
+                    <a href="../chapter01/06表单输入绑定.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        第六节：表单输入绑定
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="chapter01/07自定义组件.html">
+            
+                
+                    <a href="../chapter01/07自定义组件.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        第七节：自定义组件
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="chapter02/00.html">
+            
+                
+                    <a href="../chapter02/00.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        第二章：Vue-Router
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="chapter02/01vue-router基础.html">
+            
+                
+                    <a href="../chapter02/01vue-router基础.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        第一节：vue-router基础
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="chapter02/02vue-router进阶.html">
+            
+                
+                    <a href="../chapter02/02vue-router进阶.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        第二节：vue-router进阶
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="chapter03/00.html">
+            
+                
+                    <a href="../chapter03/00.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        第三章：Vue-Cli
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="chapter03/01node环境配置.html">
+            
+                
+                    <a href="../chapter03/01node环境配置.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        第一节：node环境配置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="chapter03/02vue-cli.html">
+            
+                
+                    <a href="../chapter03/02vue-cli.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        第二节：Vue-Cli
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="chapter03/03sass语法讲解.html">
+            
+                
+                    <a href="../chapter03/03sass语法讲解.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        第三节：sass语法讲解
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="chapter03/04rem移动端适配.html">
+            
+                
+                    <a href="../chapter03/04rem移动端适配.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        第四节：rem移动端适配
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="chapter03/05vant组件库使用.html">
+            
+                
+                    <a href="../chapter03/05vant组件库使用.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        第五节：vant组件库使用
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="chapter04/00.html">
+            
+                
+                    <a href="../chapter04/00.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        第四章：Vuex
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="chapter04/01vuex基础.html">
+            
+                
+                    <a href="../chapter04/01vuex基础.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        第一节：vuex基础
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >知了课堂Vue框架课程大纲</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;</h1>
+<p>&#x6709;&#x65F6;&#x5019;&#x6709;&#x4E00;&#x7EC4;<code>html</code>&#x7ED3;&#x6784;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5E76;&#x4E14;&#x8FD9;&#x4E2A;&#x4E0A;&#x9762;&#x53EF;&#x80FD;&#x8FD8;&#x7ED1;&#x5B9A;&#x4E86;&#x4E8B;&#x4EF6;&#x3002;&#x7136;&#x540E;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x53EF;&#x80FD;&#x6709;&#x591A;&#x4E2A;&#x5730;&#x65B9;&#x90FD;&#x88AB;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x662F;&#x62F7;&#x8D1D;&#x6765;&#x62F7;&#x8D1D;&#x53BB;&#xFF0C;&#x5F88;&#x591A;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x91CD;&#x590D;&#x7684;&#xFF0C;&#x5305;&#x62EC;&#x4E8B;&#x4EF6;&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x91CD;&#x590D;&#x7684;&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x628A;&#x8FD9;&#x4E9B;&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x4EE5;&#x540E;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8DDF;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7684;<code>html</code>&#x5143;&#x7D20;&#x4E00;&#x6837;&#xFF0C;&#x62FF;&#x8FC7;&#x6765;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h2 id="&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;">&#x57FA;&#x672C;&#x4F7F;&#x7528;&#xFF1A;</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button-counter</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button-counter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button-counter</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button-counter</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button-counter</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">button-counter</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    Vue.component(<span class="hljs-string">&apos;button-counter&apos;</span>, {
+        data: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">return</span> {
+                count: <span class="hljs-number">0</span>
+            }
+        },
+        template: <span class="hljs-string">&apos;&lt;button v-on:click=&quot;count++&quot;&gt;&#x70B9;&#x51FB;&#x4E86;{{ count }}&#x6B21;&lt;/button&gt;&apos;</span>
+    });
+    <span class="hljs-keyword">let</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {}
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0A;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>button-counter</code>&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x73B0;&#x4E86;&#x80FD;&#x591F;&#x8BB0;&#x5F55;&#x70B9;&#x51FB;&#x4E86;&#x591A;&#x5C11;&#x6B21;&#x6309;&#x94AE;&#x7684;&#x529F;&#x80FD;&#x3002;&#x540E;&#x671F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x901A;&#x8FC7;<code>button-counter</code>&#x4F7F;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x7136;&#x540E;&#x56E0;&#x4E3A;&#x7EC4;&#x4EF6;&#x662F;&#x53EF;&#x590D;&#x7528;&#x7684;<code>Vue</code>&#x5B9E;&#x4F8B;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x4EEC;&#x4E0E;<code>new Vue</code>&#x63A5;&#x6536;&#x76F8;&#x540C;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x4F8B;&#x5982;<code>data</code>&#x3001;<code>computed</code>&#x3001;<code>watch</code>&#x3001;<code>methods</code>&#x4EE5;&#x53CA;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x7B49;&#x3002;&#x4EC5;&#x6709;&#x7684;&#x4F8B;&#x5916;&#x662F;&#x50CF;<code>el</code>&#x8FD9;&#x6837;&#x6839;&#x5B9E;&#x4F8B;&#x7279;&#x6709;&#x7684;&#x9009;&#x9879;&#x3002;<strong>&#x53E6;&#x5916;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;data&#x5FC5;&#x987B;&#x4E3A;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF01;</strong></p>
+<h2 id="&#x7ED9;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#xFF1A;">&#x7ED9;&#x7EC4;&#x4EF6;&#x6DFB;&#x52A0;&#x5C5E;&#x6027;&#xFF1A;</h2>
+<p>&#x50CF;&#x539F;&#x59CB;&#x7684;<code>html</code>&#x5143;&#x7D20;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>prop</code>&#x6765;&#x6DFB;&#x52A0;&#x81EA;&#x5DF1;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x6837;&#x522B;&#x4EBA;&#x5728;&#x4F7F;&#x7528;&#x4F60;&#x521B;&#x5EFA;&#x7684;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x4E86;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">blog-post</span> <span class="hljs-attribute">v-for</span>=<span class="hljs-value">&quot;blog in blogs&quot;</span> <span class="hljs-attribute">:title</span>=<span class="hljs-value">&quot;blog.title&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">blog-post</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+    Vue.component(<span class="hljs-string">&apos;blog-post&apos;</span>, {
+        props: [<span class="hljs-string">&apos;title&apos;</span>],
+        template: <span class="hljs-string">&apos;&lt;h3&gt;{{ title }}&lt;/h3&gt;&apos;</span>
+    })
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            blogs: [
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&#x94A2;&#x94C1;&#x662F;&#x600E;&#x6837;&#x7EC3;&#x6210;&#x7684;&#xFF1F;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>},
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;AI&#x4F1A;&#x6BC1;&#x706D;&#x4EBA;&#x7C7B;&#x5417;&#xFF1F;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>},
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&#x5982;&#x4F55;&#x5B66;&#x597D;Vue&#xFF01;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">3</span>},
+            ]
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<h2 id="&#x5355;&#x4E00;&#x6839;&#x5143;&#x7D20;&#xFF1A;">&#x5355;&#x4E00;&#x6839;&#x5143;&#x7D20;&#xFF1A;</h2>
+<p>&#x5982;&#x679C;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x5F88;&#x591A;<code>html</code>&#x5143;&#x7D20;&#xFF0C;&#x90A3;&#x4E48;&#x6839;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x5728;&#x8FD9;&#x4E2A;&#x6839;&#x5143;&#x7D20;&#x4E2D;&#x3002;&#x6BD4;&#x5982;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{ title }}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">v-html</span>=<span class="hljs-value">&quot;content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x6539;&#x6210;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;blog-post&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{ title }}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">v-html</span>=<span class="hljs-value">&quot;content&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<h2 id="&#x5B50;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x548C;&#x4F20;&#x9012;&#x4E8B;&#x4EF6;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#xFF1A;">&#x5B50;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x548C;&#x4F20;&#x9012;&#x4E8B;&#x4EF6;&#x5230;&#x7236;&#x7EC4;&#x4EF6;&#xFF1A;</h2>
+<p>&#x5B50;&#x7EC4;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;&#x4E8B;&#x4EF6;&#x8DDF;&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x5982;&#x679C;&#x53D1;&#x751F;&#x67D0;&#x4E2A;&#x4E8B;&#x4EF6;&#x540E;&#x60F3;&#x8981;&#x901A;&#x77E5;&#x7236;&#x7EC4;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>this.$emit</code>&#x51FD;&#x6570;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">blog-post</span> <span class="hljs-attribute">v-for</span>=<span class="hljs-value">&quot;blog in blogs&quot;</span> <span class="hljs-attribute">:post</span>=<span class="hljs-value">&quot;blog&quot;</span> <span class="hljs-attribute">:key</span>=<span class="hljs-value">&quot;blog.id&quot;</span> <span class="hljs-attribute">v-on:like-changed</span>=<span class="hljs-value">&quot;outerLikeChanged&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">blog-post</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+    Vue.component(<span class="hljs-string">&apos;blog-post&apos;</span>, {
+        props: [<span class="hljs-string">&apos;post&apos;</span>],
+        template: `
+        &lt;div&gt;
+            &lt;h3&gt;{{ post.title }}&lt;/h3&gt;
+            &lt;input type=<span class="hljs-string">&quot;checkbox&quot;</span> v-model=<span class="hljs-string">&quot;post.like&quot;</span> v-on:change=<span class="hljs-string">&quot;innerLikeChanged&quot;</span>&gt;
+        &lt;/div&gt;
+        `,
+        methods: {
+            innerLikeChanged: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&quot;like-changed&quot;</span>,<span class="hljs-keyword">this</span>.post.id);
+            }
+        }
+    })
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            blogs: [
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&#x94A2;&#x94C1;&#x662F;&#x600E;&#x6837;&#x7EC3;&#x6210;&#x7684;&#xFF1F;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;like&quot;</span>:<span class="hljs-literal">false</span>},
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;AI&#x4F1A;&#x6BC1;&#x706D;&#x4EBA;&#x7C7B;&#x5417;&#xFF1F;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&quot;like&quot;</span>:<span class="hljs-literal">false</span>},
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&#x5982;&#x4F55;&#x5B66;&#x597D;Vue&#xFF01;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&quot;like&quot;</span>:<span class="hljs-literal">false</span>},
+            ]
+        },
+        methods: {
+            outerLikeChanged: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(post_id)</span></span>{
+                <span class="hljs-keyword">this</span>.blogs.forEach(blog =&gt; {
+                    <span class="hljs-keyword">if</span>(blog[<span class="hljs-string">&apos;id&apos;</span>] == post_id){
+                        blog.like = !blog.like
+                        console.log(blog);
+                    }
+                });
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x56E0;&#x4E3A;<code>html</code>&#x4E2D;&#x5927;&#x5C0F;&#x5199;&#x662F;&#x4E0D;&#x654F;&#x611F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5B9A;&#x4E49;&#x5B50;&#x7EC4;&#x4EF6;&#x4F20;&#x7ED9;&#x7236;&#x7EC4;&#x4EF6;&#x4E8B;&#x4EF6;&#x540D;&#x79F0;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;<code>myEvent</code>&#x8FD9;&#x79CD;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x6CD5;&#xFF0C;&#x800C;&#x662F;&#x4F7F;&#x7528;<code>my-event</code>&#x8FD9;&#x79CD;&#x89C4;&#x5219;&#x3002;</p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;vmodel&#xFF1A;">&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;<code>v-model</code>&#xFF1A;</h2>
+<p>&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E0A;&#x7684;<code>v-model</code>&#x9ED8;&#x8BA4;&#x4F1A;&#x5229;&#x7528;&#x540D;&#x4E3A;<code>value</code>&#x7684;<code>prop(&#x5C5E;&#x6027;)</code>&#x548C;&#x540D;&#x4E3A;<code>input</code>&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x662F;&#x50CF;&#x5355;&#x9009;&#x6846;&#x3001;&#x590D;&#x9009;&#x6846;&#x7B49;&#x7C7B;&#x578B;&#x7684;&#x8F93;&#x5165;&#x63A7;&#x4EF6;&#x53EF;&#x80FD;&#x4F1A;&#x5C06;<code>value</code>&#x7279;&#x6027;&#x7528;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x76EE;&#x7684;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>model</code>&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">blog-post</span> <span class="hljs-attribute">v-for</span>=<span class="hljs-value">&quot;blog in blogs&quot;</span> <span class="hljs-attribute">v-model</span>=<span class="hljs-value">&quot;blog.like&quot;</span> <span class="hljs-attribute">:blog</span>=<span class="hljs-value">&quot;blog&quot;</span> <span class="hljs-attribute">:key</span>=<span class="hljs-value">&quot;blog.id&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">blog-post</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+    Vue.component(<span class="hljs-string">&apos;blog-post&apos;</span>, {
+        model: {
+            event: <span class="hljs-string">&apos;myevent&apos;</span>,
+            prop: <span class="hljs-string">&apos;liked&apos;</span>
+        },
+        props: {
+            blog: Object,
+            liked: <span class="hljs-literal">false</span>
+        },
+        template: `
+        &lt;div&gt;
+            &lt;h3&gt;{{blog.title}}&lt;/h3&gt;
+            &lt;input type=<span class="hljs-string">&quot;checkbox&quot;</span> v-bind:checked=<span class="hljs-string">&quot;liked&quot;</span> v-on:click=<span class="hljs-string">&quot;likeClick&quot;</span>&gt;
+        &lt;/div&gt;
+        `,
+        methods: {
+            likeClick: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(event)</span></span>{
+                <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">&apos;myevent&apos;</span>,event.target.checked);
+            }
+        }
+    })
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>,
+        data: {
+            blogs: [
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&#x94A2;&#x94C1;&#x662F;&#x600E;&#x6837;&#x7EC3;&#x6210;&#x7684;&#xFF1F;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">1</span>,<span class="hljs-string">&quot;like&quot;</span>:<span class="hljs-literal">false</span>},
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;AI&#x4F1A;&#x6BC1;&#x706D;&#x4EBA;&#x7C7B;&#x5417;&#xFF1F;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">2</span>,<span class="hljs-string">&quot;like&quot;</span>:<span class="hljs-literal">false</span>},
+                {<span class="hljs-string">&quot;title&quot;</span>:<span class="hljs-string">&quot;&#x5982;&#x4F55;&#x5B66;&#x597D;Vue&#xFF01;&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-number">3</span>,<span class="hljs-string">&quot;like&quot;</span>:<span class="hljs-literal">false</span>},
+            ]
+        },
+        created: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+            <span class="hljs-comment">// setInterval(()=&gt;{</span>
+            <span class="hljs-comment">//     this.blogs.forEach(blog =&gt; {</span>
+            <span class="hljs-comment">//         console.log(blog.title,blog.like);</span>
+            <span class="hljs-comment">//     });</span>
+            <span class="hljs-comment">// },2000);</span>
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#x7684;<code>props</code>&#x5B9A;&#x4E49;&#x7684;&#x4E24;&#x4E2A;&#x5C5E;&#x6027;&#x5206;&#x522B;&#x662F;&#x7ED9;&#x5916;&#x9762;&#x8C03;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;&#x7684;&#x3002;<code>model</code>&#x603B;&#x5B9A;&#x4E49;&#x7684;<code>prop:&apos;like&apos;</code>&#x662F;&#x544A;&#x8BC9;&#x540E;&#x9762;&#x4F7F;&#x7528;<code>v-model</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x4FEE;&#x6539;&#x54EA;&#x4E2A;&#x5C5E;&#x6027;&#xFF1B;<code>event:&apos;myevent&apos;</code>&#x662F;&#x544A;&#x8BC9;<code>v-model</code>&#xFF0C;&#x540E;&#x9762;&#x89E6;&#x53D1;&#x54EA;&#x4E2A;&#x4E8B;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x8981;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x3002;</p>
+<h2 id="&#x63D2;&#x69FD;&#xFF1A;">&#x63D2;&#x69FD;&#xFF1A;</h2>
+<p>&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x5B8C;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x540E;&#xFF0C;&#x53EF;&#x80FD;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x9700;&#x8981;&#x5F80;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E2D;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x6216;&#x8005;&#x6587;&#x672C;&#x3002;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x63D2;&#x69FD;&#x6765;&#x5B9E;&#x73B0;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">navigation-link</span> <span class="hljs-attribute">url</span>=<span class="hljs-value">&quot;/profile/&quot;</span>&gt;</span>
+        &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;
+    <span class="hljs-tag">&lt;/<span class="hljs-title">navigation-link</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+    Vue.component(<span class="hljs-string">&apos;navigation-link&apos;</span>, {
+        props: [<span class="hljs-string">&apos;url&apos;</span>],
+        template: `
+        &lt;a v-bind:href=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">nav</span>-<span class="hljs-title">link</span>&quot;&gt;
+            &lt;<span class="hljs-title">slot</span>&gt;&lt;/<span class="hljs-title">slot</span>&gt;
+        &lt;/<span class="hljs-title">a</span>&gt;
+        `
+    })
+    <span class="hljs-title">new</span> <span class="hljs-title">Vue</span>(</span>{
+        el: <span class="hljs-string">&quot;#app&quot;</span>
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+<p>&#x5F53;&#x7EC4;&#x4EF6;&#x6E32;&#x67D3;&#x7684;&#x65F6;&#x5019;&#xFF0C;<code>&lt;slot&gt;&lt;/slot&gt;</code>&#x5C06;&#x4F1A;&#x88AB;&#x66FF;&#x6362;&#x4E3A;&#x201C;&#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;&#x201D;&#x3002;&#x63D2;&#x69FD;&#x5185;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x6A21;&#x677F;&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;<code>HTML</code>&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">navigation-link</span> <span class="hljs-attribute">url</span>=<span class="hljs-value">&quot;/profile&quot;</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- &#x6DFB;&#x52A0;&#x4E00;&#x4E2A; Font Awesome &#x56FE;&#x6807; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fa fa-user&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+  &#x4E2A;&#x4EBA;&#x4E2D;&#x5FC3;
+<span class="hljs-tag">&lt;/<span class="hljs-title">navigation-link</span>&gt;</span>
+</code></pre>
+<p>&#x5982;&#x679C;<code>&lt;navigation-link&gt;</code>&#x6CA1;&#x6709;&#x5305;&#x542B;&#x4E00;&#x4E2A;<code>&lt;slot&gt;</code>&#x5143;&#x7D20;&#xFF0C;&#x5219;&#x8BE5;&#x7EC4;&#x4EF6;&#x8D77;&#x59CB;&#x6807;&#x7B7E;&#x548C;&#x7ED3;&#x675F;&#x6807;&#x7B7E;&#x4E4B;&#x95F4;&#x7684;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x90FD;&#x4F1A;&#x88AB;&#x629B;&#x5F03;&#x3002;</p>
+<h4 id="&#x4F5C;&#x7528;&#x57DF;&#xFF1A;">&#x4F5C;&#x7528;&#x57DF;&#xFF1A;</h4>
+<p>&#x901A;&#x8FC7;&#x5916;&#x9762;&#x4F20;&#x7ED9;&#x7EC4;&#x4EF6;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x4EE5;&#x540E;&#x4F7F;&#x7528;&#x63D2;&#x69FD;&#x7684;&#x65F6;&#x5019;&#x662F;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7684;&#x3002;&#x6BD4;&#x5982;&#x4EE5;&#x4E0A;<code>url</code>&#x53EA;&#x80FD;&#x5728;<code>navigation-link</code>&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x9762;&#x4F7F;&#x7528;&#x63D2;&#x69FD;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">navigation-link</span> <span class="hljs-attribute">url</span>=<span class="hljs-value">&quot;/profile&quot;</span>&gt;</span>
+  Clicking here will send you to: {{ url }}
+  <span class="hljs-comment">&lt;!--
+  &#x8FD9;&#x91CC;&#x7684; `url` &#x4F1A;&#x662F; undefined&#xFF0C;&#x56E0;&#x4E3A; &quot;/profile&quot; &#x662F;
+  _&#x4F20;&#x9012;&#x7ED9;_ &lt;navigation-link&gt; &#x7684;&#x800C;&#x4E0D;&#x662F;
+  &#x5728; &lt;navigation-link&gt; &#x7EC4;&#x4EF6;*&#x5185;&#x90E8;*&#x5B9A;&#x4E49;&#x7684;&#x3002;
+  --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">navigation-link</span>&gt;</span>
+</code></pre>
+<h4 id="&#x63D2;&#x69FD;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;">&#x63D2;&#x69FD;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</h4>
+<p>&#x6709;&#x65F6;&#x5019;&#x5728;&#x4F7F;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x63D2;&#x69FD;&#x4E2D;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x60C5;&#x51B5;&#x662F;&#x4E00;&#x79CD;&#x5143;&#x7D20;&#x3002;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x7ED9;&#x63D2;&#x69FD;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x540E;&#x9762;&#x5982;&#x679C;&#x4E0D;&#x50CF;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EA;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#x6709;&#x4E00;&#x4E2A;&#x53EB;&#x505A;<code>submit-button</code>&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;submit&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">slot</span>&gt;</span>&#x63D0;&#x4EA4;<span class="hljs-tag">&lt;/<span class="hljs-title">slot</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;<code>&lt;submit-button&gt;&lt;/submit-button&gt;</code>&#xFF0C;&#x9ED8;&#x8BA4;&#x5728;&#x91CC;&#x9762;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x201C;&#x63D0;&#x4EA4;&#x201D;&#x6587;&#x5B57;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x663E;&#x793A;&#x5176;&#x4ED6;&#x6587;&#x5B57;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>&lt;submit-button&gt;&#x4FDD;&#x5B58;&lt;/submit-button&gt;</code>&#x6765;&#x5B9E;&#x73B0;&#x3002;</p>
+<h4 id="&#x547D;&#x540D;&#x63D2;&#x69FD;&#xFF1A;">&#x547D;&#x540D;&#x63D2;&#x69FD;&#xFF1A;</h4>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x63D2;&#x69FD;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x5C31;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x540D;&#x5B57;&#x6765;&#x8FDB;&#x884C;&#x533A;&#x5206;&#x4E86;&#x3002;&#x5176;&#x5B9E;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x540D;&#x5B57;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x53EB;&#x505A;<code>default</code>&#x7684;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x53EB;<code>container</code>&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;container&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">slot</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;header&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">slot</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">main</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">slot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">slot</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">footer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">slot</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">&quot;footer&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">slot</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<p>&#x4EE5;&#x540E;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;<code>v-slot:&#x63D2;&#x69FD;&#x540D;</code>&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x52A0;&#x8F7D;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">container</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">v-slot:header</span>&gt;</span>
+        &#x8FD9;&#x662F;&#x5934;&#x90E8;&#x4FE1;&#x606F;
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    &#x8FD9;&#x662F;&#x4E3B;&#x8981;&#x90E8;&#x5206;&#x7684;&#x4FE1;&#x606F;
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">v-slot:footer</span>&gt;</span>
+        &#x8FD9;&#x662F;&#x7F51;&#x9875;&#x5C3E;&#x90E8;&#x4FE1;&#x606F;
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">container</span>&gt;</span>
+</code></pre>
+<h4 id="&#x63D2;&#x69FD;&#x4F5C;&#x7528;&#x57DF;&#xFF1A;">&#x63D2;&#x69FD;&#x4F5C;&#x7528;&#x57DF;&#xFF1A;</h4>
+<p>&#x9ED8;&#x8BA4;&#x5728;&#x63D2;&#x69FD;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x5168;&#x5C40;<code>Vue</code>&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x7EC4;&#x4EF6;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x90A3;&#x4E48;&#x9700;&#x8981;&#x5728;&#x5B9A;&#x4E49;<code>slot</code>&#x7684;&#x65F6;&#x5019;&#x4F7F;&#x7528;<code>v-bind</code>&#x6765;&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">sub-nav</span> <span class="hljs-attribute">v-slot</span>=<span class="hljs-value">&quot;slotProps&quot;</span>&gt;</span>
+    &#x5F53;&#x524D;&#x70B9;&#x51FB;&#xFF1A;{{slotProps.index}}
+    <span class="hljs-tag">&lt;/<span class="hljs-title">sub-nav</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="actionscript">
+    Vue.component(<span class="hljs-string">&apos;sub-nav&apos;</span>, {
+        props: [<span class="hljs-string">&apos;url&apos;</span>],
+        data: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+            <span class="hljs-keyword">return</span> {
+                navs: [<span class="hljs-string">&apos;&#x7F51;&#x7EDC;&#x8BBE;&#x7F6E;&apos;</span>,<span class="hljs-string">&apos;&#x8DEF;&#x7531;&#x8BBE;&#x7F6E;&apos;</span>,<span class="hljs-string">&apos;&#x8BBE;&#x5907;&#x7BA1;&#x7406;&apos;</span>],
+                index: <span class="hljs-number">0</span>
+            }
+        },
+        methods: {
+            indexBtnClick: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(index)</span></span>{
+                <span class="hljs-keyword">this</span>.index = index;
+            }
+        },
+        template: `
+        &lt;div <span class="hljs-class"><span class="hljs-keyword">class</span>=&quot;<span class="hljs-title">container</span>&quot;&gt;
+            &lt;<span class="hljs-title">button</span> <span class="hljs-title">v</span>-<span class="hljs-title">for</span>=&quot;(<span class="hljs-title">nav</span>,<span class="hljs-title">index</span>) <span class="hljs-title">in</span> <span class="hljs-title">navs</span>&quot; @<span class="hljs-title">click</span>=&quot;<span class="hljs-title">indexBtnClick</span>(<span class="hljs-title">index</span>)&quot; <span class="hljs-title">v</span>-<span class="hljs-title">bind</span>:<span class="hljs-title">key</span>=&quot;<span class="hljs-title">index</span>&quot;&gt;</span>{{nav}}&lt;/button&gt;
+            &lt;slot v-bind:index=<span class="hljs-string">&quot;index&quot;</span>&gt;&lt;/slot&gt;
+        &lt;/div&gt;
+        `
+    })
+    <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">&quot;#app&quot;</span>
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../chapter01/06表单输入绑定.html" class="navigation navigation-prev " aria-label="Previous page: 第六节：表单输入绑定"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../chapter02/00.html" class="navigation navigation-next " aria-label="Next page: 第二章：Vue-Router"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

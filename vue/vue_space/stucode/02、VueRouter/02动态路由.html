@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li>
+                <router-link to="/index">首页</router-link>
+            </li>
+            <li>
+                <router-link to="/person/123">个人中心</router-link>
+            </li>
+        </ul>
+
+
+        <!-- router view -->
+        <div class="container">
+            <router-view></router-view>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    // 创建组件
+    var index = Vue.extend({
+        template: '<h1>首页</h1>'
+    })
+    var person = Vue.extend({
+        template: '<h1>user id : {{$route.params.userid}}</h1>',
+        mounted() {
+            // 当前路由中信息
+            console.log(this.$route);
+            // 全局VueRouter对象
+            console.log(this.$router);
+
+        }
+    })
+
+
+    // 定义vue路由
+    let router = new VueRouter({
+        routes: [{
+                path: '/',
+                component: index
+            }, {
+                path: '/person/:userid',
+                component: person
+            }
+
+        ]
+    })
+
+    new Vue({
+        el: "#app ",
+        router
+    })
+</script>
+
+
+</html>

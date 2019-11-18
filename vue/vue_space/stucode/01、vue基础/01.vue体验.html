@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <p>调用data：{{data}}</p>
+        调用函数：{{sayHello()}}
+
+        <!-- 动态绑定 -->
+        <p><button @click="data='change value'">更改值</button></p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                "data": "hello Vue"
+            },
+            methods: {
+                sayHello: function() {
+                    return "下午好！" + this.data
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

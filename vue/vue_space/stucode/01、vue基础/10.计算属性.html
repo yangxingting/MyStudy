@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="app">
+        <div>
+            <label for="">宽度：</label>
+            <!-- v-model 绑定申明的变量 -->
+            <input type="text" v-model:value="width">
+
+        </div>
+
+        <div>
+            <label for=" ">高度：</label>
+            <!-- v-model 绑定申明的变量 -->
+            <input type="text " v-model:value="heigh ">
+
+        </div>
+
+        <!-- <div>面积：{{area}}</div> -->
+
+        <!-- 计算属性get,set -->
+        <div>
+            <label>省：</label>
+            <input type="text" v-model:value="province">
+        </div>
+        <div>
+            <label>市：</label>
+            <input type="text" v-model:value="city">
+        </div>
+        <div>
+            <label>区：</label>
+            <input type="text" v-model:value="district">
+        </div>
+        <div>
+            <label>详细地址：</label>
+            <input type="text" v-model:value="address">
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            width: 0,
+            heigh: 0,
+            province: "",
+            city: "",
+            district: "",
+
+
+
+        },
+        computed: {
+            address: {
+                get: function() {
+                    let result = "";
+                    if (this.province) {
+                        result += this.province + "省";
+                    }
+                    if (this.city) {
+                        result += this.city + "市";
+                    }
+                    if (this.district) {
+                        result += this.district + "区";
+                    }
+                    console.log(result)
+                    return result;
+                },
+                set: function(newValue) {
+                    let result = newValue.split(/省|市|区/)
+                    if (result && result.length > 0) {
+                        this.province = result[0];
+                    }
+                    if (result && result.length > 1) {
+                        this.city = result[1];
+                    }
+                    if (result && result.length > 2) {
+                        this.district = result[2]
+
+                    }
+
+                }
+            },
+            // area() {
+            //     return this.width * this.heigh
+
+            // }
+
+        },
+    })
+</script>
+
+
+</ht

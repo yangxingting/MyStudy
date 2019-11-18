@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .box1 {
+        background-color: #ccc;
+        width: 500px;
+        /* 出发BFC 可以帮助清除浮动造成的影响 */
+        overflow: hidden;
+    }
+    
+    .box1-one {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        float: left;
+    }
+    
+    .box1-two {
+        width: 150px;
+        height: 180px;
+        background-color: green;
+        float: left;
+    }
+    
+    .box2 {
+        background-color: blue;
+        width: 500px;
+        height: 200px;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div class="box1-one"></div>
+        <div class="box1-two"></div>
+    </div>
+    <div class="box2"></div>
+</body>
+
+</html>
+
+</html>

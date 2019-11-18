@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 显示文本 -->
+        <p v-once>显示文本{{username}}</p>
+        <button @click="username='林小萌'">change</button>
+
+        <!-- 显示原生的HTML： -->
+        <p v-html="http">显示原生html:</p>
+
+        <!-- 属性绑定 -->
+        <img v-bind:src="imgsrc" alt="vue">
+
+        <!-- v-bind简略写法 -->
+        <p><img :src="imgsrc" alt="vue"></p>
+
+    </div>
+
+
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            "username": "zhangsan",
+            'http': "<a href='https://www.baidu.com/'>百度一下，你就知道！</a>",
+            'imgsrc': "https://cn.vuejs.org/images/logo.png",
+        }
+    })
+</script>
+
+</html>

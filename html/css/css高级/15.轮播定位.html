@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    ol {
+        list-style: none;
+    }
+    
+    .slider {
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .left-img,
+    .right-img {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        top: 50%;
+        margin-top: -15px;
+    }
+    
+    .left-img {
+        margin-left: -48%;
+    }
+    
+    .right-img {
+        margin-left: 45%;
+    }
+    
+    .indicator {
+        width: 100px;
+        height: 18px;
+        background-color: rgba(255, 255, 255, .3);
+        position: absolute;
+        bottom: 15px;
+        left: 50%;
+        margin-left: -50px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .indicator li {
+        width: 10px;
+        height: 10px;
+        background-color: skyblue;
+        float: left;
+        border-radius: 100%;
+        margin: 4px 0 3px 8px;
+    }
+    
+    .indicator li.current {
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="slider">
+        <img src="../img/s1.jpg" alt="">
+
+        <a href="#" class="left-img">
+            <img src="../img/left-circle.png" alt="">
+        </a>
+
+        <a href="#" class="right-img">
+            <img src="../img/right-circle.png" alt="">
+        </a>
+
+        <ol class="indicator">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>

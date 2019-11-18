@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+
+    <style>
+        .title {
+            color: red;
+            font-size: 20px;
+        }
+        
+        .main_title {
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id='app'>
+        <!-- class-数组绑定 -->
+        <p v-bind:class="pclass1">hell,html</p>
+        <p v-bind:class="[pclass1,pcalss2]">hello,Vue</p>
+
+        <!--class- 对象绑定 -->
+        <p :class="{title:true,main_title:isStrong}">hello,v-bind</p>
+        <p><button @click="isStrong=true">change Strong</button></p>
+
+        <!-- style 绑定对象 -->
+        <p :style="{backgroundColor:backGroundColor}">hello,style</p>
+        <p :style="pStyle">hello,style</p>
+        <!-- style 绑定数组 -->
+        <p :style="[pStyle,pStyle2]">hello,style2</p>
+
+    </div>
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            pclass1: 'title',
+            pcalss2: 'main_title',
+            isStrong: false,
+            backGroundColor: 'red',
+            pStyle: {
+                'background-color': 'blue',
+                'font-size': '30px',
+
+            },
+            pStyle2: {
+                'font-weight': 'bolder'
+            }
+
+        }
+    })
+</script>
+
+
+</html>

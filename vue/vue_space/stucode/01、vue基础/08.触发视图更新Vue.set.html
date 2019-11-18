@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<div id="app">
+    <ul>
+        <li v-for="hero in heros">
+            {{hero}}
+        </li>
+    </ul>
+
+    <p>username: {{person.username}} age:{{person.age}} </p>
+
+    <button @click="updateArray">修改数组元素</button>
+    <button @click="updateObj">修改对象属性</button>
+</div>
+
+<body>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            person: {
+                'username': '林小萌',
+                'age': 22,
+            },
+            heros: ['孙悟空', '美国队长', '猪八戒', '蜘蛛侠', '绿巨人'],
+        },
+        methods: {
+            updateArray() {
+                //直接修改数组中的某个值是不会出发视图更新的。
+                // this.heros[0] = "黑猫警长";
+                Vue.set(this.heros, 0, '黑猫警长');
+            },
+            updateObj() {
+                // 直接修改this.person.age是没有效果的
+                // this.person.age = 18;
+                Vue.set(this.person, 'age', 18)
+
+            }
+
+
+        },
+
+    })
+</script>
+
+</html>

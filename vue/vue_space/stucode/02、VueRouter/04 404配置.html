@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+
+</head>
+
+<body>
+    <div id="app">
+
+
+
+
+        <div class="container">
+            <!-- 路由出口 -->
+            <router-view></router-view>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    // 创建组件
+    var index = Vue.extend({
+        template: '<h1>首页</h1>'
+    })
+    var about = Vue.extend({
+        template: '<h1>关于我们</h1>',
+
+    })
+
+    var person = Vue.extend({
+        template: "<h1>用户ID：{{$route.params.userid}}</h1>",
+        // 页面安装好之后，判断用户信息是否存在
+        mounted() {
+            if (this.$route.params.userid != '123') {
+                // 路由跳转到指定页面
+                this.$router.replace('/404')
+            }
+        },
+        // 防止组件复用 页面没有刷新
+        watch: {
+            '$route': function(to, from) {
+                if (to.params.userid != 123) {
+                    this.$router.replace('/404')
+                }
+
+            }
+        }
+
+    })
+    var notfound = Vue.extend({
+        template: '<h1>404:页面没有找到</h1>',
+
+
+    })
+
+
+    // 定义vue路由
+    let router = new VueRouter({
+        routes: [{
+                path: '/',
+                component: index
+            }, {
+                path: '/about',
+                component: about
+            }, {
+                path: '/person/:userid',
+                component: person
+            }, {
+                path: '404/',
+                component: notfound
+            },
+
+            {
+                path: "*",
+                component: notfound
+            }
+
+
+        ]
+    })
+
+    new Vue({
+        el: "#app ",
+        router: router,
+    })
+</script>
+
+
+</html>

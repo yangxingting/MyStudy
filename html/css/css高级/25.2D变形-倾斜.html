@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        background-color: pink;
+        width: 200px;
+        height: 200px;
+        margin: 200px auto;
+        transition: all 1s;
+        /* 改变中心点  left top :左上角  right top： 右上角 */
+        transform-origin: left top;
+    }
+    
+    div:hover {
+        /* transform: skewX(-45deg); */
+        /* transform: skewY(45deg); */
+        transform: skew(45deg, 45deg);
+    }
+</style>
+
+<body>
+    <div>
+        旋转，跳跃，闭上眼
+    </div>
+
+</body>
+
+</html>

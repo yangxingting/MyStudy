@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    img {
+        width: 100px;
+        height: 100px;
+        animation: run 2s infinite;
+        margin: 100px auto;
+    }
+    
+    @keyframes run {
+        0% {
+            transform: translate(0, 0);
+        }
+        49% {
+            transform: translateX(400px);
+        }
+        50% {
+            transform: translateX(400px) rotateY(180deg);
+        }
+        100% {
+            transform: translate(0, 0) rotateY(180deg);
+        }
+    }
+</style>
+
+<body>
+    <img src="../img/runboy.png" alt="">
+
+
+</body>
+
+</html>

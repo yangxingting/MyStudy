@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="weather=='sun'">去公园玩</p>
+        <p v-else-if="weather==rain">去看电影</p>
+        <p v-else>哪也不去</p>
+
+        <!-- tempalte标签  内部可以添加多个标签 -->
+        <!-- <template v-if="age<18">
+            <p>语文考了多少分</p>
+            <p>数学考了多少分</p>
+        </template>
+
+        <template v-else-if="age>=18 && age<26">
+            <p>有没有拿奖学金呀</p>
+            <p>谈女朋友了没有呀</p>
+        </template>>
+
+        <template v-else="age>=26">
+        <p>工作怎么样</p>
+        <p>工资多少钱呀</p> -->
+
+        <!-- 在模板中，Vue会尽量重用已有的元素，而不是重新渲染，
+            这样可以变得更加高效。如果你允许用户在不同的登录方式之间切换： -->
+        <template v-if="loginType=='username'">
+        <label for="username">用户名：</label>
+        <input type="text" id="username" name="username" placeholder="用户名" key='username'>
+        </template>
+        <template v-else-if="loginType=='email'">
+                <label for="email">邮箱：</label>
+                <input type="text" id="email" name="email" placeholder="邮箱" key="email">
+        </template>
+        <div>
+            <button @click="changeLoginType">改变登录方式</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+<Script>
+    new Vue({
+        el: "#app",
+        data: {
+            weather: "rain",
+            age: 28,
+            loginType: 'username',
+        },
+        methods: {
+            changeLoginType() {
+                this.loginType = this.loginType == 'username' ? 'email' : 'username'
+            }
+        },
+    })
+</Script>
+
+</html>

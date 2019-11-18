@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>标题</th>
+                    <th>作者</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 数组循环 -->
+                <tr v-for="(book,index) in books">
+                    <td>{{index+1}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <div>
+            <!-- 对象循环 -->
+            <div v-for="(key,value) in person">
+                {{key}}:{{value}}
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            books: [{
+                'title': '三国演义',
+                'author': '罗贯中'
+            }, {
+                'title': '水浒传',
+                'author': '施耐庵'
+            }, {
+                'title': '西游记',
+                'author': '吴承恩'
+            }, {
+                'title': '红楼梦',
+                'author': '曹雪芹'
+            }],
+            person: {
+                "username": "林小萌",
+                "age": 18,
+                "homepage": "https://www.baidu.com/"
+            },
+        },
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        transition: all 0.8s;
+    }
+    
+    div:active {
+        transform: translate(200px, 50px);
+    }
+    /* 例如transform 来做绝对定位中的居中显示 */
+    
+    .pink {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+
+<body>
+    <div></div>
+
+    <div class="pink"></div>
+</body>
+
+</html>

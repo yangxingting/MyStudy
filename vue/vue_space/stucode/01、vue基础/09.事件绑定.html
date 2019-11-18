@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <!-- 事件绑定 -->
+            <li v-for="book in books" :key="book" v-on:click="liClick(book)">
+                {{book}}
+            </li>
+        </ul>
+
+        <!-- 传入event参数 -->
+        <a href="htts//www.baidu.com" @click="changeLink($event)">event参数</a>
+
+        <!-- 事件修饰符   prevent:阻止默认行为-->
+        <a href="htts//www.baidu.com" @click.prevent="changeLink2">事件修饰符</a> .stop：event.stopPropagation，阻止事件冒泡。 .capture：事件捕获。 .once：这个事件只执行一次。 .self：代表当前这个被点击的元素自身。 .passive：在页面滚动的时候告诉浏览器不会阻止默认的行为，从而让滚动更加顺畅。
+
+        <!-- .stop：event.stopPropagation，阻止事件冒泡。
+        .capture：事件捕获。
+        .once：这个事件只执行一次。
+        .self：代表当前这个被点击的元素自身。
+        .passive：在页面滚动的时候告诉浏览器不会阻止默认的行为，从而让滚动更加顺畅。 -->
+    </div>
+
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            books: ['斗罗大陆', '全球高舞', '斗破苍穹'],
+        },
+        methods: {
+            liClick(bookname) {
+                console.log(bookname);
+            },
+            changeLink(event) {
+                console.log(event);
+                event.preventDefault();
+                window.location = "https://www.qq.com";
+
+
+            },
+            changeLink2() {
+
+                window.location = "https://www.qq.com";
+
+
+            }
+        },
+    })
+</script>
+
+
+</html>

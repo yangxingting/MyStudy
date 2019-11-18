@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+<!-- 
+    v-show > 隐藏   v-if  gone 
+    1、v-show ：一次性把所有的都渲染出来，然后通过简单的切换display值来修改是否被渲染，在频繁
+    更改的情况下推荐使用  （v-show 不能再element标签下使用）
+    2、v-if ： 真正的条件渲染，如果条件更改了，那么就会做标签销毁重建，时间绑定等。
+    在不需要频繁切换的情况下使用
+
+
+-->
+
+<body>
+    <div id="app">
+        <div v-show="loginType=='username'">
+            <label for="username">用户名：</label>
+            <input type="text" id="username" name="username" placeholder="用户名" key='username'>
+        </div>
+        <div v-show="loginType=='email'">
+            <label for="email">邮箱：</label>
+            <input type="text" id="email" name="email" placeholder="邮箱" key="email">
+        </div>
+
+
+        <div>
+            <button @click="changeLoginType">改变登录方式</button>
+
+        </div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            loginType: "username"
+        },
+        methods: {
+            changeLoginType() {
+                this.loginType = this.loginType == 'username' ? 'email' : 'username'
+            }
+        },
+
+    })
+</script>
+
+
+</html>

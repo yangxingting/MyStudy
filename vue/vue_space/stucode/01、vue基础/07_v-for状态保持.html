@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--类似list里面的item 循环出来的元素，如果没有使用key元素来唯一标识，如果后期的数据发生了更改，
+            默认是会重用的，并且元素的顺序不会跟着数据的顺序更改而更改 
+        
+        key只能是整形，或者是字符串类型，不能为数组或者对象
+        -->
+        <div v-for="book in books" :key="book.title">
+            <label for="">标题:   </label>
+            <input type="text" :placeholder="book.title">
+        </div>
+
+        <div>
+            <button @click="changeBookSort">更改图书顺序</button>
+        </div>
+
+    </div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            books: [{
+                'title': '三国演义',
+                'author': '罗贯中'
+            }, {
+                'title': '水浒传',
+                'author': '施耐庵'
+            }, {
+                'title': '西游记',
+                'author': '吴承恩'
+            }, {
+                'title': '红楼梦',
+                'author': '曹雪芹'
+            }],
+        },
+        methods: {
+            changeBookSort() {
+                this.books.sort(function(a, b) {
+                    return Math.random(0, 1) - 0.5
+                })
+            }
+        },
+    })
+</script>
+
+</html>

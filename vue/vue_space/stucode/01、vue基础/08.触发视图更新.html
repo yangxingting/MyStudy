@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Vue对一些方法进行了包装和变异，
+        以后数组通过这些方法进行数组更新，会出发视图的更新
+    1、直接赋值更新 this.heros=[]
+    2、通过函数更新  this.heros.push()
+    2.1、push()：添加元素的方法
+    2.2、pop()：删除数组最后一个元素
+    2.3、shift()：删除数组的第一个元素
+    2.4、unshift(item)：在数组的开头位置添加一个元素
+
+    //index: 操作元素的位置   howmany:操作几个元素
+    splice(index,howmany,item1,...,itemX)：向数组中添加或者删除或者替换元素
+    //删除 ：删除开始位置为0 ，两个元素
+    this.heros.splice(0,2)
+    //替换  将下标为2的元素替换成 "大黄蜂"
+    this.heros.splice（2,1,"大黄蜂"）
+    //将下标2、3 的元素替换成"大黄蜂"、"绿箭侠"
+    this.heros.splice(2,,2,"大黄蜂","绿箭侠")
+
+    2.5、sort(function)：排序
+
+     this.books.sort(function(x,y){
+     // 取两个随机数排序
+     a = Math.random();
+     b = Math.random();
+     return a-b;
+
+     2.6、this.books.reverse();
+
+     还有一些Vue没有包装的方法，比如filter、concat、slice，
+     如果使用这些方法修改了数组，那么只能把修改后的结果重新赋值给原来的数组才能生效。
+     this.books = this.books.filter(function(x){
+          return x.length>3?false:true;
+     }
+
+   
+     
+})
+
+
+ });
+
+    -->
+    <div id="app">
+
+        <ul>
+            <li v-for="hero in heros">
+                {{hero}}
+            </li>
+        </ul>
+
+        <button @click="update">更新视图</button>
+
+    </div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            heros: ['孙悟空', '美国队长', '猪八戒', '蜘蛛侠', '绿巨人'],
+        },
+        methods: {
+            update() {
+                // 直接赋值更新 
+                // this.heros = ["林小萌"]
+
+                // 函数更新
+                this.heros.push("林可萌")
+            }
+        }
+
+    })
+</script>
+
+</html>

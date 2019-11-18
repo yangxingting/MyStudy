@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../vue.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- 表达式三目运算符 -->
+        <p :style="{color:isDange?'red':'black'}">{{message.split(",").reverse().join("-")}}</p>
+        <!-- 函数调用 -->
+        <p>{{sayHello()}}</p>
+        <!-- 取反函数 -->
+        {{!isDange}}
+    </div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            isDange: true,
+            message: "hello,vue",
+        },
+        methods: {
+            sayHello() {
+                return "hello"
+            }
+        },
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- 
+    浮动特性2:  浮动元素的排列位置和上一级的父级元素有关
+    1、如果上级元素是标准流，则浮动元素的顶部会和 上一个元素的底部对齐
+    2、如果上一级元素也浮动，则顶部对齐、同一排显示
+ -->
+<style>
+    div:first-child {
+        width: 200px;
+        height: 100px;
+        background-color: crimson;
+        float: left;
+    }
+    
+    div:last-child {
+        width: 200px;
+        height: 100px;
+        background-color: darkseagreen;
+        float: left;
+    }
+</style>
+
+
+<body>
+    <div></div>
+    <div></div>
+
+</body>
+
+</html>
