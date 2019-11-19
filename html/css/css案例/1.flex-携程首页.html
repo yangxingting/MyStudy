@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    /* header */
+    
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+    
+    header>a {
+        flex: 1;
+    }
+    
+    header>a>img {
+        width: 100%;
+    }
+    /* main */
+    
+    main {
+        width: 100%;
+        /* 内容距离盒子边距10px */
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    
+    main>.item {
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        border-radius: 5px;
+        display: flex;
+    }
+    
+    main>.item:nth-child(1) {
+        background-color: slateblue;
+    }
+    
+    main>.item:nth-child(2) {
+        background-color: skyblue;
+    }
+    
+    main>.item:nth-child(3) {
+        background-color: tomato;
+    }
+    
+    main>.item:nth-child(4) {
+        background-color: violet;
+    }
+    /* footer */
+</style>
+
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <a href="">
+                <img src="../img/banner.png" alt="">
+            </a>
+        </header>
+
+        <!-- 主要内容 -->
+        <main>
+
+            <!-- item1 -->
+            <section class="item">
+                <div class="item-left"></div>
+                <div class="item-right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特价机票</a>
+                    <a href="">民宿客栈</a>
+                </div>
+
+            </section>
+            <!-- item2 -->
+            <section class="item">
+                <div class="item-left"></div>
+                <div class="item-right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特价机票</a>
+                    <a href="">民宿客栈</a>
+                </div>
+
+            </section>
+            <!-- item3 -->
+            <section class="item">
+                <div class="item-left"></div>
+                <div class="item-right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特价机票</a>
+                    <a href="">民宿客栈</a>
+                </div>
+
+            </section>
+            <!-- item4 -->
+            <section class="item">
+                <div class="item-left"></div>
+                <div class="item-right">
+                    <a href="">海外酒店</a>
+                    <a href="">团购</a>
+                    <a href="">特价机票</a>
+                    <a href="">民宿客栈</a>
+                </div>
+
+            </section>
+
+            <!-- item扩展 -->
+            <section class="extra">
+                <div class="extra-left">
+                    <a href="">
+                        <img src="../img/extra_1.jpg" alt="">
+                    </a>
+
+                </div>
+                <div class="extra-right">
+                    <a href="">
+                        <img src="../img/extra_2.jpg" alt="">
+                    </a>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- 尾部 -->
+        <footer>
+
+            <!-- 导航 -->
+            <div class="nav">
+                <a href="">电话预定</a>
+                <a href="">下载客户端</a>
+                <a href="">我的</a>
+            </div>
+
+            <!-- 外链 -->
+            <p class="link">
+                <a href="网站地图 "></a>
+                <a href="English"></a>
+                <a href="电脑版"></a>
+            </p>
+
+            <!-- 版权 -->
+            <p class="copyright">
+                &copy;携程旅行
+            </p>
+
+
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
