@@ -50,6 +50,33 @@
         display: flex;
     }
     
+    main>.item>.item-left {
+        flex: 1;
+    }
+    
+    main>.item>.item-right {
+        flex: 2;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    main>.item>.item-right>a {
+        display: flex;
+        width: 50%;
+        color: #ffffff;
+        justify-content: center;
+        align-items: center;
+        /* 边框线 */
+        box-sizing: border-box;
+        border-left: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+    }
+    /* 最下面两个a标签不需要下边线 */
+    
+    .item>.item-right>a:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+    
     main>.item:nth-child(1) {
         background-color: slateblue;
     }
@@ -65,7 +92,42 @@
     main>.item:nth-child(4) {
         background-color: violet;
     }
+    /* 扩展区域 */
+    
+    .extra {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    .extra>a {
+        flex: 1;
+    }
+    
+    .extra>a>img {
+        width: 100%;
+    }
     /* footer */
+    
+    footer>.nav {
+        width: 100%;
+        display: flex;
+    }
+    
+    footer>.nav>a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid #cccccc;
+        border-bottom: 1px solid #cccccc;
+        padding: 5px;
+    }
+    
+    .copyright {
+        text-align: center;
+        margin-top: 5px;
+    }
 </style>
 
 <body>
@@ -127,18 +189,14 @@
 
             <!-- item扩展 -->
             <section class="extra">
-                <div class="extra-left">
-                    <a href="">
-                        <img src="../img/extra_1.jpg" alt="">
-                    </a>
+                <a href="">
+                    <img src="../img/extra_1.jpg" alt="">
+                </a>
 
-                </div>
-                <div class="extra-right">
-                    <a href="">
-                        <img src="../img/extra_2.jpg" alt="">
-                    </a>
+                <a href="">
+                    <img src="../img/extra_2.jpg" alt="">
+                </a>
 
-                </div>
 
             </section>
 
@@ -175,4 +233,4 @@
 
 </body>
 
-</html>
+</html

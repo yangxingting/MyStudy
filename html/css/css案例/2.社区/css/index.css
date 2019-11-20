@@ -1,0 +1,179 @@
+/* 公共样式规则-begain */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    color: #1a1a1a;
+    background-color: #f6f6f6;
+}
+
+a {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* 公共样式规则-end */
+
+
+/* 头部样式-begain */
+
+#hd {
+    width: 100%;
+    height: 52px;
+    background-color: white;
+    /* 固定定位 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* 阴影  水平：0  垂直：1px  模糊：1px*/
+    box-shadow: 0 1px 1px #e7e7e7;
+}
+
+#hd>.hd-main {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#hd>.hd-main>.hd-main-left {
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+}
+
+#hd>.hd-main>.hd-main-right {
+    display: flex;
+    align-items: center;
+}
+
+#hd>.hd-main>.hd-main-right>a {
+    /* 块级标签显示  */
+    display: block;
+    margin: 0 15px;
+}
+
+#hd>.hd-main>.hd-main-right>a>i {
+    color: #e7e7e7;
+}
+
+#hd>.hd-main>.hd-main-right>a>img {
+    width: 30px;
+    height: 30px;
+}
+
+#hd>.hd-main>.hd-main-left>a>img {
+    width: 80px;
+    height: 25px;
+}
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-nav {
+    margin-left: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-nav>a {
+    padding: 0 10px;
+    color: #8590a6;
+}
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-nav>a:hover {
+    color: #444444;
+}
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-nav>.current {
+    padding: 0 10px;
+    color: #444444;
+}
+
+
+/* 搜索框 */
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-serch {
+    width: 260px;
+    height: 30px;
+    margin-left: 10px;
+    position: relative;
+}
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-serch>input {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    /* box-sizing: border-box; */
+    border: 1px solid #e7e7e7;
+    background-color: #efefef;
+    padding-left: 5px;
+}
+
+
+/* 去除input外边线 */
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-serch>input:focus {
+    outline: none;
+    border-color: #175199;
+}
+
+#hd>.hd-main>.hd-main-left>.hd-main-left-serch>i {
+    color: #999999;
+    position: absolute;
+    top: 30%;
+    right: 5px;
+}
+
+#hd>.hd-main>.hd-main-left>button {
+    border: none;
+    /* 取消选中外边框 */
+    outline: none;
+    width: 40px;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 3px;
+}
+
+#hd>.hd-main>.hd-main-left>button:hover {
+    background-color: #175199;
+    cursor: pointer;
+}
+
+
+/* 头部样式-end */
+
+
+/* main-begain */
+
+main {
+    display: flex;
+}
+
+main>.mian-left {
+    flex: 2;
+    height: 500px;
+    background-color: skyblue;
+}
+
+main>.main-right {
+    flex: 1;
+    height: 500px;
+    background-color: pink;
+}
+
+
+/* main-end */
