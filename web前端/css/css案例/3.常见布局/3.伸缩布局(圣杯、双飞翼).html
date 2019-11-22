@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        width: 100%;
+        height: 200px;
+        background-color: pink;
+        display: flex;
+    }
+    
+    .left {
+        /* 圣杯 */
+        flex: 2;
+        /* 双飞翼  两边固定宽度*/
+        /* width: 200px; */
+        background-color: crimson;
+    }
+    
+    .content {
+        flex: 6;
+        background-color: green;
+    }
+    
+    .right {
+        flex: 2;
+        /* width: 200px; */
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="left">1</div>
+        <div class="content">2 content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、content、</div>
+        <div class="right">3</div>
+
+    </div>
+
+</body>
+
+</html>
