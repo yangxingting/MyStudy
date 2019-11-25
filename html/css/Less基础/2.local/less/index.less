@@ -1,0 +1,107 @@
+//1、 定义变量
+@tSizeNomal:14px;
+@tSizeBig:30px;
+
+@cFontNomal:black;
+@cFontWarn:red;
+
+@containerWith:200px;
+@containerBgc:skyblue;
+
+
+
+// 2、嵌套
+.container1{
+    width: @containerWith;
+    // 3、数值类型变量 支持表达式运算： + - * / （）
+    height: @containerWith+100;
+    background-color: @containerBgc;
+
+    h1{
+        color: @cFontNomal;
+    }
+    div{
+        size: @tSizeNomal;
+        color: @cFontWarn;
+        p{
+            color: @cFontWarn;
+        }
+    }
+}
+
+// 4、定义混合(自定义函数) . 混合名称（）{} ， 可传自定义参数 . 混合名称（args）{}
+.circular(@radius:30px,@rotate:50deg){
+    border-radius: @radius;  
+    transform:rotate(@rotate)
+}
+
+// 引入混合  .混合名称();
+.container2{
+    .box1{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 50px;
+        // 没有参数的情况下可以不传参数
+        .circular();
+    }
+    .box2{
+        width: 300px;
+        height: 300px;
+        background-color: cornflowerblue;
+        margin: 100px;
+        .circular(10px,-15deg)
+    }
+    .box3{
+        width: 200px;
+        height: 200px;
+        // 5.函数 。 less封装好的混合；例如：颜色混合函数：screen(颜色1,颜色2)
+        background-color: screen(red,green);
+    }
+    
+}
+
+// 6、匹配, 两个混合名称相同，可根据首个参数别名去匹配
+.radius(leftTop,@radius:10px){
+    border-top-left-radius: @radius;
+}
+.radius(rightTop,@radius:10px){
+    border-top-right-radius: @radius;
+}
+
+.container3{
+    div{
+        width: 200px;
+        height: 200px;
+        margin: 50px;
+    }
+    .box1{
+        background-color: red;
+        // 匹配 混合
+        .radius(leftTop, 20px)
+        
+    }
+    .box2{
+        background-color: green;
+        // 匹配 混合
+        .radius(rightTop, 20px)
+    }
+}
+
+
+// 7.引入其他其他lese 文件
+@import "base";
+
+
+
+ 
+.box1{
+    color:@cFontNomal;
+    font-size: @tSizeNomal;
+    background: skyblue;
+}
+
+.box2{
+    color:@cFontWarn;
+    font-size:@tSizeBig;
+}
